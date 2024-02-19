@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travello template project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <script src="{% static 'js/popper.min.js' %}" ></script>
+
+
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/about.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'styles/about_responsive.css' %}">
+
+	<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+
+</head>
+<body style="background-image:url({% static 'images/movie_temp.jpg' %}); background-size: cover; ">
+
+<div class="super_container">
+
+	<!-- Header -->
+
+<!--	<header class="header">-->
+<!--		<div class="container">-->
+<!--			<div class="row">-->
+<!--				<div class="col">-->
+<!--					<div class="header_content d-flex flex-row align-items-center justify-content-start">-->
+<!--						<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">-->
+<!--							<div class="logo"><a href="{% static 'index.html' %}">Movie Website</a></div>-->
+
+<!--							<nav class="main_nav">-->
+<!--								<ul class="d-flex flex-row align-items-start justify-content-start">-->
+<!--									<li><a href="#">Home</a></li>-->
+
+<!--									<ul class="dropdown-menu">-->
+<!--									<li class="active" href="{% url 'movieapp:allMovieCat' %}">Movies</a></li>-->
+<!--									{% for cat in links %}-->
+
+<!--             						 <li><a class="dropdown-item" href="{{cat.get_url}}">{{cat.name}}</a></li>-->
+<!--           								{% endfor %}-->
+<!--										</ul>-->
+
+<!--<li class="nav-item dropdown">-->
+<!--        <a class="nav-link dropdown-toggle" href="{% url 'movieapp:allMovieCat' %}">-->
+<!--          Movie-->
+<!--        </a>-->
+<!--	{% for cat in links %}-->
+<!--          <a class="dropdown-item" href="{{cat.get_url}}">{{cat.name}}</a>-->
+<!--          {% endfor %}-->
+<!--      </li>-->
+
+<!--									{% if user.is_authenticated %}-->
+<!--									<li style="color:red;">Hello {{user.username}}</li>-->
+
+<!--									<li><a href="{% url 'credentials:logout' %}">Logout</a></li>-->
+<!--								{% endif %}-->
+<!--								</ul>-->
+<!--							</nav>-->
+
+<!--							&lt;!&ndash; Hamburger &ndash;&gt;-->
+
+<!--							<div class="hamburger ml-auto">-->
+<!--								<i class="fa fa-bars" aria-hidden="true"></i>-->
+<!--							</div>-->
+
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+
+<!--	</header>-->
+
+	<!-- Menu -->
+
+<!--<div class="card text-center">-->
+<!--  <div class="card-header">-->
+<!--    <ul class="nav nav-pills card-header-pills">-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link active" href="#">Active</a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link" href="#">Link</a>-->
+<!--      </li>-->
+<!--      <li class="nav-item">-->
+<!--        <a class="nav-link disabled" href="#">Disabled</a>-->
+<!--      </li>-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Special title treatment</h5>-->
+<!--    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>-->
+<!--    <a href="#" class="btn btn-primary">Go somewhere</a>-->
+<!--  </div>-->
+<!--</div>-->
+
+	<!-- Home -->
+
+<!--	<div class="home">-->
+<!--		<div class="background_image" style="background-image:url({% static 'images/movie_temp.jpg' %})"></div>-->
+<!--	</div>-->
+<div class="navbar" style="background-color:#004d99">
+								<nav class="main_nav">
+									<ul class="d-flex flex-row align-items-start justify-content-start">
+										<li><a href="{% url 'movieapp:allMovieCat' %}">Home</a></li>
+										<li class="disabled"><a href=" " class="disabled-link">Hello {{user.username}}</a></li>
+										<li><a href=" "></a></li>
+										<li><a href="{% url 'credentials:logout' %}">Logout</a></li>
+									</ul>
+								</nav>
+							</div>
+    </div>
+
+<!--    <div>-->
+<!--        <div>-->
+<!--            <img src="{{movie.poster.url}}" alt="{{movie.name}}">-->
+<!--        </div>-->
+<!--    </div>-->
+
+<!--    <div>-->
+<!--        <div>-->
+<!--            <h1>{{movie.name}}</h1>-->
+<!--            <p>Description: {{movie.description}}</p>-->
+<!--            <p>Actors: {{movie.actors}}</p>-->
+<!--            <p>YouTube trailer link: <a href="#">{{movie.link}}</a></p>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+
+	<div class="row">
+<div class="col-md-4">
+  <img src="{{movie.poster.url}}" class="card-img-top" alt="...">
+ </div>
+
+	  <div class="col-md-6">
+		  <div>
+			  <div>
+				  ...
+			  </div>
+		  </div>
+<div style="color:white;">
+    <h5>{{movie.name}}</h5>
+		  <p style="color:white;">Description: {{movie.description}}</p>
+            <p style="color:white;">Actors: {{movie.actors}}</p>
+            <p style="color:white;">YouTube trailer link: <a href="#">{{movie.link}}</a></p>
+        	<p style="color:white;">Release date: {{movie.release_date}} </p>
+			<p style="color:white;">Category: {{movie.category}}</p>
+</div>
+<br>
+		<a href="{% url 'movieupdate:edit' movie.id %}" id="btnEdit" class="btn btn-success" {% if not has_permission %} style="display: none;" {% endif %}>Edit</a>
+<a href="{% url 'movieupdate:delete' movie.id %}" id="btnDelete" class="btn btn-danger" {% if not has_permission %} style="display: none;" {% endif %}>Delete</a>
+<a href="{% url 'reviewapp:rate' %}" id="btnRate" class="btn btn-primary">Rate</a>
+
+  </div>
+	  </div>
+</div>
+<h4 style="text-align:center;padding-top:30px">Comments</h4>
+<div class="container" style="padding: 16px;">
+    <div class="row mx-auto">
+        {% for review in reviews %}
+        <div class="my_bottom_margin col-sm-12 col-md-4 col-md-12 col-lg-6">
+
+            <div class="card text-center" style="min-width: 18rem;">
+  <div class="card-body">
+    <h6 class="card-title" >{{review.user}}</h6>
+    <p class="card-text">{{review.comments}}</p>
+	 <p class="card-text">
+    {% for star in "*****" %}
+        {% if forloop.counter <= review.rating %}
+            <i class="fa fa-star" style="color:yellow; font-size: 40px;">*</i>
+        {% else %}
+            <i class="fa fa-star" style="color:grey; font-size: 40px;">*</i>
+        {% endif %}
+    {% endfor %}
+</p>
+ </div>
+</div> <BR>
+
+        </div>
+        {% endfor %}
+    </div>
+
+<div class="mx-auto">
+        {% if movies.paginator.num_pages > 1 %}
+
+        <hr>
+        <div class="text-center">
+            {% for pg in movies.paginator.page_range %}
+            <a href="?page={{pg}}" class="btn btn-light btn-sm
+                {% if movies.number == pg %} active {% endif %}">{{pg}}
+            </a>
+            {% endfor %}
+        </div>
+         {% endif %}
+    </div>
+
+    <nav aria-label="...">
+  <ul class="pagination pagination-sm">
+     </ul>
+	</nav>
+    <br>
+</div>
+
+
+
+<footer>
+		<div class="col text-center"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --> </div>
+
+	</footer>
+</div>
+
+
+</html>
